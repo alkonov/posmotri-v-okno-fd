@@ -86,8 +86,6 @@ ol {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  height: 534px;
-  padding-top: 10px;
 }
 
 .title {
@@ -129,8 +127,7 @@ ol {
 }
 
 .content__card-link_current {
-  padding-right: 3px;
-  padding-left: 3px;
+  background-color: #545050;
   cursor: pointer;
 }
 
@@ -149,11 +146,6 @@ ol {
   outline: none;
 }
 
-.content__card-link_current:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: -2px;
-}
-
 .search-form {
   display: flex;
   flex-direction: row;
@@ -162,7 +154,8 @@ ol {
   gap: 40px;
   width: 100%;
   position: relative;
-  top: 5px;
+  margin-top: 5px;
+  margin-bottom: -5px;
 }
 
 .search-form__fieldset {
@@ -198,9 +191,13 @@ ol {
   padding: 2px 0px 2px 0;
   border: none;
   outline: none;
-  border-top: 1px solid #FFFFFFB2;
-  border-bottom: 1px solid #FFFFFFB2;
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
   -webkit-tap-highlight-color: transparent;
+}
+
+.search-form__textfield::placeholder {
+  color: rgb(255 255 255 / 0.7);
 }
 
 .search-form__textfield:focus {
@@ -260,6 +257,8 @@ ol {
   font-weight: 700;
   background-color: transparent;
   cursor: pointer;
+  min-width: 194px;
+  min-height: 34px;
 }
 
 .button:hover {
@@ -281,14 +280,11 @@ ol {
 }
 
 .search-form__submit-button {
-  width: 194px;
-  height: 34px;
   align-self: flex-end;
 }
 
 .more-button {
-  width: 100%;
-  min-height: 34px;
+  justify-content: flex-end;
 }
 
 .search-form__checkbox-list {
@@ -300,26 +296,25 @@ ol {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  height: 534px;
+  height: 298px;
   overflow: auto;
-  overflow-x: hidden;
   gap: 30px;
   position: relative;
   width: 100%;
 }
 
 .content__video-card-title {
-  width: 100%;
+  width: 196px;
   font-family: Oswald, sans-serif;
   text-transform: uppercase;
   font-size: 30px;
   font-weight: 700;
   line-height: 100%;
   letter-spacing: 0%;
+  margin-bottom: 6px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-bottom: 6px;
 }
 
 .content__video-card-description {
@@ -330,7 +325,7 @@ ol {
   line-height: 16.2px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 4;
   overflow: hidden;
 }
 
@@ -365,9 +360,4 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
-}
-
-.preloader {
-  position: relative;
-  inset: 0;
 }
